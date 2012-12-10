@@ -25,8 +25,13 @@ From the directory, where you unarchived libtextcat, run:
 
 ### Go
 
+Let's say you downloaded and unarchived libtextcat into **$DownloadPath**
+
+* export CPATH=**$DownloadPath**/src 
 * go get github.com/goodsign/libtextcat
 * go test (must PASS)
+
+Note: first step is needed to locate header files. They are located in the **src** folder in the unarchived folder. If this step is incorrect or skipped you will get 'fatal error: textcat.h: No such file or directory')
 
 Installation notes
 ==========
