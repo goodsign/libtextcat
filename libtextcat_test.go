@@ -25,7 +25,11 @@ func testLanguage(t *testing.T, language string, filename string) {
         t.Fatalf("Cannot read text file: %s", err)
     }
 
-    res := cat.Classify(string(fbytes))
+    res, err := cat.Classify(string(fbytes))
+
+    if nil != err {
+        t.Fatalf("Cannot classify: %s", err)
+    }
 
     if len(res) == 0 ||
        res[0] != language {

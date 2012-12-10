@@ -62,7 +62,7 @@ func (tc *TextCat) Classify(text string) ([]string, error) {
     }
 
     goResult = goResult[1 : len(goResult) - 1]
-    return strings.Split(goResult, "][")
+    return strings.Split(goResult, "]["), nil
 }
 
 // Close frees native C resources
