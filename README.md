@@ -15,29 +15,29 @@ Installation consists of several simple steps. They may be a bit different on yo
 
 NOTE: If this link is not working or there are some problems with downloading, there is a stable version 2.2 snapshot saved in [Downloads](https://github.com/downloads/goodsign/libtextcat/libtextcat-2.2.tar.gz).
 
-### Build and install libtextcat
+### Build and install libtextcat C library
 
 From the directory, where you unarchived libtextcat, run:
 
-* ./configure
-* make
-* sudo make install
+```
+./configure
+make
+sudo make install
+```
 
-### Go
+### Install Go wrapper
 
-Let's say you downloaded and unarchived libtextcat into **$DownloadPath**
-
-* export CPATH=$DownloadPath/src (Note: ABSOLUTE path)
-* go get github.com/goodsign/libtextcat
-* go test (must PASS)
-
-Note: first step is needed to locate header files. They are located in the **src** folder in the unarchived folder. If this step is incorrect or skipped you will get 'fatal error: textcat.h: No such file or directory'). Absolute path is needed.
+```
+go get github.com/goodsign/libtextcat
+go test github.com/goodsign/libtextcat (must PASS)
+```
 
 Installation notes
 ==========
 
-Make sure that you have your local library paths set correctly and that installation was successful. Otherwise, **go build** may
-fail on the linking stage.
+Make sure that you have your local library paths set correctly and that installation was successful. Otherwise, **go build** or **go test** may fail.
+
+libtextcat is installed in your local library directory (e.g. **/usr/local/lib**) and puts its libraries there. This path should be registered in your system (using ldconfig or exporting LD_LIBRARY_PATH, etc.) or the linker would fail.
 
 Usage
 ==========
