@@ -50,7 +50,7 @@ if nil != err {
 }
 defer cat.Close()
 
-matches, err := cat.Classify(string(fbytes))
+matches, err := cat.Classify(text)
 
 if nil != err {
     // ... Handle error ...
@@ -64,11 +64,11 @@ if nil != err {
 Usage notes
 ==========
 
-libtextcat library needs to load language models to start guessing languages. These models are set using a configuration file and a number of language model (*.lm) files.
+libtextcat library needs to load language models to start guessing languages. These models are set using a configuration file and a number of language model (.lm) files.
 
-Configuration file maps *.lm files to identifiers used in the library. See [example](https://github.com/goodsign/libtextcat/blob/master/defaultcfg/conf.txt). Path to this file is specified in the **NewTextCat** call.
+Configuration file maps .lm files to identifiers used in the library. See [example](https://github.com/goodsign/libtextcat/blob/master/defaultcfg/conf.txt). Path to this file is specified in the **NewTextCat** call.
 
-*.lm files contains language patterns and frequencies for a specified language. See [example](https://github.com/goodsign/libtextcat/blob/master/defaultcfg/english.lm). Paths to these files are specified in the config file above. They can be absolute or relative (to the caller).
+.lm files contain language patterns and frequencies for a specified language. See [example](https://github.com/goodsign/libtextcat/blob/master/defaultcfg/english.lm). Paths to these files are specified in the config file above. They can be absolute or relative (to the caller).
 
 Quickstart
 ----------
@@ -84,29 +84,29 @@ This will give you a standard set of languages described in the **Default config
 Default configuration
 ----------
 
-This package contains a default configuration (**/defaultcfg** folder) which is created to work in following conditions:
+This package contains a default configuration (/defaultcfg) which is created to work in following conditions:
 
 * Utf-8 only languages
-* Language list is taken from [stem](github.com/goodsign/stem) package
-* Language identifiers are the same as in [stem](github.com/goodsign/stem) package
+* Language list is taken from [snowball](github.com/goodsign/snowball) package
+* Language identifiers are the same as in [snowball](github.com/goodsign/snowball) package
 
-This configuration is meant to be used in pair with the [stem](github.com/goodsign/stem) package.
+This configuration is meant to be used in pair with the [snowball](github.com/goodsign/snowball) package.
 
 More info
 ----------
 
-For more information and detailed theory on libtextcat refer to the original [website](http://software.wise-guys.nl/libtextcat/), which contains links on theory and other info.
+For more information on libtextcat refer to the original [website](http://software.wise-guys.nl/libtextcat/), which contains links on theory and other details.
 
 libtextcat Licence
 ==========
 
-[BSD Licence](http://opensource.org/licenses/bsd-license.php)
+The libtextcat library is released under the [BSD Licence](http://opensource.org/licenses/bsd-license.php)
 
 [LICENCE file](https://github.com/goodsign/libtextcat/blob/master/LICENCE_libtextcat)
 
 Licence
 ==========
 
-[BSD Licence](http://opensource.org/licenses/bsd-license.php)
+The goodsign/libtextcat binding is released under the [BSD Licence](http://opensource.org/licenses/bsd-license.php)
 
 [LICENCE file](https://github.com/goodsign/libtextcat/blob/master/LICENCE)
