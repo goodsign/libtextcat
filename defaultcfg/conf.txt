@@ -1,4 +1,4 @@
-defaultcfg/danish.lm		danish
+defaultcfg/danish.lm        danish
 defaultcfg/dutch.lm         dutch
 defaultcfg/english.lm       english
 defaultcfg/finnish.lm       finnish
