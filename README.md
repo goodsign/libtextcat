@@ -23,7 +23,7 @@ From the directory, where you unarchived libtextcat, run:
 ./configure
 make
 sudo make install
-sudo ldconfig
+sudo ldconfig 
 ```
 
 ### Install Go wrapper
